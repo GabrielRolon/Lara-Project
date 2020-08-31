@@ -1,6 +1,13 @@
 #ifndef STRUSUARIO_H_INCLUDED
 #define STRUSUARIO_H_INCLUDED
 
+/// Declaracion de struct fecha y usuario
+struct Fecha{
+    int dia;
+    int mes;
+    int anio;
+};
+
 struct Usuario{
     int id;
     char nombre[50];
@@ -12,6 +19,10 @@ struct Usuario{
     bool aptoMedico;
     bool estado;
 };
+
+// Declaracion de prototipos para las funciones de fecha y usuario
+Fecha cargarFecha();
+void mostrarFecha(Fecha);
 
 Usuario cargarDatos();
 void mostrarDatos(Usuario);

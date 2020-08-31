@@ -9,18 +9,18 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1598824641 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
+1598914168 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
 
-1598826531 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
+1598914145 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
 
 1598825509 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
 	<iostream>
 	"funciones.h"
 	"strUsuario.h"
 
-1598840053 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.cpp
+1598913756 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.cpp
 	<iostream>
 	"fecha.h"
 
-1598826531 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
+1598913724 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
 
