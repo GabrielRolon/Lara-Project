@@ -4,3 +4,23 @@
 1598821152 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\main.cpp
 	<iostream>
 
+1598825591 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
+	<iostream>
+	"funciones.h"
+	"strUsuario.h"
+
+1598824641 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
+
+1598826531 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
+
+1598825509 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
+	<iostream>
+	"funciones.h"
+	"strUsuario.h"
+
+1598840053 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.cpp
+	<iostream>
+	"fecha.h"
+
+1598826531 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
+
