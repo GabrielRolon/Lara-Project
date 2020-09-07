@@ -73,7 +73,7 @@ void menuUsuarios(){
             listarUsuarios();
         break;
         case 5:
-            //menuUsuarios();
+            eliminarUser();
         break;
         case 0:
             menuPrincipal();

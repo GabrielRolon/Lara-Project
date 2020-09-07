@@ -101,7 +101,9 @@ void listarUsuarios(){
     int cant = cantidadUsuarios();
     for(int i=0; i<cant; i++){
         Usuario user = leerUser(i);
-        mostrarDatos(user);
+        if(user.estado){
+            mostrarDatos(user);
+        }
     }
     cout << endl << endl;
     system("pause");
@@ -184,10 +186,38 @@ bool modificarUser(){
         cout << "No existe Usuario" << endl;
         return false;
     }
-
     system("pause");
     menuUsuarios();
+}
+bool eliminarUser(){
+    system("cls");
+    int codigo, pos;
+    char opc[2];
+    cout << "Ingresar ID a buscar para eliminar: ";
+    cin >> codigo;
+    pos = buscarUsuario(codigo);
+    if(pos >= 0){
+        cout << "\nUsuario a eliminar: " << endl;
+        cout << "---------------------" << endl;
+        Usuario user = leerUser(pos);
+        mostrarDatos(user);
+        cout << endl;
+        cout << "Ingresar opcion a modificar: " << endl;
+        cout << "Eliminar user? (Si / No)" << endl;
+        cin >> opc;
+        if(opc == "Si"){
+            user.estado = false;
+        } else {
+            user.estado = true;
+        }
+        guardarModificacion(user, pos);
 
+    } else {
+        cout << "No existe Usuario" << endl;
+        return false;
+    }
+    system("pause");
+    menuUsuarios();
 }
 bool guardarModificacion(Usuario user, int pos){
     bool guardo;
