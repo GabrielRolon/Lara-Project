@@ -6,4 +6,7 @@
 void menuPrincipal();
 void menuUsuarios();
 
+
+///Funciones de verificacion de datos
+
 #endif // FUNCIONES_H_INCLUDED

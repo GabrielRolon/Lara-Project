@@ -37,13 +37,14 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1599516620 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.h
+1599517208 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.h
 
 1599514128 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\strusuario.h
 
-1599516805 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\main.cpp
+1599517223 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\main.cpp
 	<iostream>
-	<conio.h>
+	<locale.h>
+	<stdlib.h>
 	"funciones.h"
 	"strUsuario.h"
 
