@@ -6,27 +6,7 @@ using namespace std;
 
 int main(){
 
-    Usuario user;
-    user = cargarDatos();
-    mostrarDatos(user);
+    menuPrincipal();
 
     return 0;
 }
-/*
-void menu(opcion){
-
-         int opcion;
-         while(true){
-             switch(opcion){
-         case 1:
-             break;         case 2:
-             break;         case 3:
-             break;         case 4:
-             break;         case 0: return 0;
-             break;
-             }
-         }
-
-
-};
-*/

@@ -24,7 +24,17 @@ struct Usuario{
 Fecha cargarFecha();
 void mostrarFecha(Fecha);
 
-Usuario cargarDatos();
-void mostrarDatos(Usuario);
+Usuario cargarDatos(); // Carga los datos de un user
+void mostrarDatos(Usuario); // Muestra el reg de un user
+int buscarUsuario(int); // Busca el usuario y devuelve la posicion
+bool guardarUsuario(Usuario); // Guarda el registro de un user dentro de archivo.dat
+void listarUsuarios(); // Lista todos los datos del archivo.dat
+int cantidadUsuarios(); // Indica la cantidad total de usuarios registrados
+Usuario leerUser(int); // Lee el reg del usuario por la posicion
+void listarPorId(); // Lista por ID
+bool modificarUser();
+bool guardarModificacion(Usuario, int);
+/// BACKUP DE ARCHIVO.DAT
+bool backupArchivo();
 
 #endif // STRUSUARIO_H_INCLUDED
