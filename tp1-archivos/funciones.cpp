@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 using namespace std;
 #include <cstdio>
 #include "funciones.h"
@@ -8,6 +8,7 @@ using namespace std;
 ///Funciones generales
 
 void menuPrincipal(){
+    system("cls");
     cout << "MENU PRINCIPAL" << endl;
     cout << "--------------" << endl;
     cout << "1) USUARIOS" << endl;
@@ -37,8 +38,8 @@ void menuPrincipal(){
             backupArchivo();
         break;
         case 0:
-            //CerrarPrograma();
-        break;
+            system("cls");
+            break;
     }
 }
 
@@ -74,7 +75,7 @@ void menuUsuarios(){
             //menuUsuarios();
         break;
         case 0:
-            //menuUsuarios();
+            menuPrincipal();
         break;
     }
 }
