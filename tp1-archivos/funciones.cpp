@@ -1,5 +1,6 @@
 #include <iostream>
-#include <stdlib.h>
+#include <windows.h>
+#include <string.h>
 using namespace std;
 #include <cstdio>
 #include "funciones.h"
@@ -80,5 +81,26 @@ void menuUsuarios(){
     }
 }
 
+///Funciones de verificacion de datos
 
+///Funcion para validar nombre
+ void verificarNombre(char nombre[50]){
+    cin.ignore();
+    cout<<"Ingresar nombre: ";
+    cin.getline(nombre,50);
+    while(strlen(nombre)==0 ){
+        cout<<"ERROR - El nombre no puede ir vacío - Intente nuevamente: ";
+        cin.getline(nombre,50);
+    }
+ }
 
+ ///Funcion para validar apellido
+ void verificarApellido(char apellido[50]){
+    cin.ignore();
+    cout<<"Ingresar apellido: ";
+    cin.getline(apellido,50);
+    while(strlen(apellido)==0 ){
+        cout<<"ERROR - El apellido no puede ir vacío - Intente nuevamente: ";
+        cin.getline(apellido,50);
+    }
+ }

@@ -31,26 +31,27 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1599514128 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funcusuarios.cpp
+1599519317 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"
 
-1599517208 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.h
+1599519298 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.h
 
 1599514128 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\strusuario.h
 
-1599517223 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\main.cpp
+1599519072 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\main.cpp
 	<iostream>
 	<locale.h>
-	<stdlib.h>
+	<windows.h>
 	"funciones.h"
 	"strUsuario.h"
 
-1599516966 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.cpp
+1599519456 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
-	<stdlib.h>
+	<windows.h>
+	<string.h>
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"

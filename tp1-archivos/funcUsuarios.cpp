@@ -16,13 +16,8 @@ Usuario cargarDatos(){
         cin >> user.id;
     }
 
-    cout<<endl<<"ingresar nombre/s: ";
-    cin.ignore();
-    cin.getline(user.nombre,50);
-
-    cout<<endl<<"Ingresar Apellido/s: ";
-    cin.ignore();
-    cin.getline(user.apellido,50);
+    verificarNombre(user.nombre);
+    verificarApellido(user.apellido);
 
     cout<<endl<<"ingresar fecha de nacimiento: ";
     user.nacimiento = cargarFecha();
