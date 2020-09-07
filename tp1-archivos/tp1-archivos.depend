@@ -31,8 +31,9 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1599519317 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funcusuarios.cpp
+1599520963 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
+	<windows.h>
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"
@@ -48,7 +49,7 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1599519456 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.cpp
+1599520645 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>

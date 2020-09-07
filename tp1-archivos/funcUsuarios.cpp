@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 #include <cstdio>
@@ -8,6 +9,7 @@ using namespace std;
 const char *FILEUSUARIOS = "datos/archUsuarios.dat";
 
 Usuario cargarDatos(){
+    system("cls");
     Usuario user;
     cout<<"Ingresar ID: ";
     cin>>user.id;
@@ -95,11 +97,15 @@ bool guardarUsuario(Usuario user){
 
 /// LEE el archivo.dat todos los usuarios
 void listarUsuarios(){
+    system("cls");
     int cant = cantidadUsuarios();
     for(int i=0; i<cant; i++){
         Usuario user = leerUser(i);
         mostrarDatos(user);
     }
+    cout << endl << endl;
+    system("pause");
+    menuUsuarios();
 }
 int cantidadUsuarios(){
     FILE *f = fopen(FILEUSUARIOS, "rb");
@@ -125,8 +131,9 @@ Usuario leerUser(int pos){
     fclose(f);
 }
 void listarPorId(){
+    system("cls");
     int codigo, pos;
-    cout << "Ingresar ID a buscar: " << endl;
+    cout << "Ingresar ID a buscar: ";
     cin >> codigo;
     pos = buscarUsuario(codigo);
     if(pos >= 0){
@@ -134,16 +141,20 @@ void listarPorId(){
         user = leerUser(pos);
         mostrarDatos(user); //alternativa tambien funciona: mostrarDatos(leerUser(pos));
     } else {
-        cout << "Codigo inexistente" << endl;
+        cout << "\nCodigo inexistente" << endl;
     }
+    cout << endl << endl;
+    system("pause");
+    menuUsuarios();
 }
 bool modificarUser(){
+    system("cls");
     int codigo, pos, opc;
-    cout << "Ingresar ID a buscar: " << endl;
+    cout << "Ingresar ID a buscar: ";
     cin >> codigo;
     pos = buscarUsuario(codigo);
     if(pos >= 0){
-        cout << "Usuario a modificar: " << endl;
+        cout << "\nUsuario a modificar: " << endl;
         cout << "---------------------" << endl;
         Usuario user = leerUser(pos);
         mostrarDatos(user);
@@ -173,6 +184,9 @@ bool modificarUser(){
         cout << "No existe Usuario" << endl;
         return false;
     }
+
+    system("pause");
+    menuUsuarios();
 
 }
 bool guardarModificacion(Usuario user, int pos){

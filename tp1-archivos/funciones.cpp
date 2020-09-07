@@ -18,7 +18,7 @@ void menuPrincipal(){
     cout << "4) CONFIGURACION" << endl;
     cout << "5) Copia de seguridad del archivo.dat antes de cada ejecucion" << endl;
     cout << "--------------" << endl;
-    cout << "0) SALIR DEL PROGRAMA" << endl;
+    cout << "0) SALIR DEL PROGRAMA" << endl << endl;
 
     int opcion;
     cin >> opcion;
@@ -54,7 +54,7 @@ void menuUsuarios(){
     cout << "4) LISTAR TODOS LOS USUARIOS" << endl;
     cout << "5) ELIMINAR USUARIO" << endl;
     cout << "--------------" << endl;
-    cout << "0) VOLVER AL MENU PRINCIPAL" << endl;
+    cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
 
     int opcion;
     cin >> opcion;
