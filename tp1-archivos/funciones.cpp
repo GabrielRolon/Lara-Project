@@ -79,6 +79,7 @@ void menuUsuarios(){
             menuPrincipal();
         break;
     }
+    menuUsuarios();
 }
 
 ///Funciones de verificacion de datos
