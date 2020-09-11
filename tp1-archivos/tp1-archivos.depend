@@ -4,7 +4,7 @@
 1598821152 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\main.cpp
 	<iostream>
 
-1599780963 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
+1599785806 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>
@@ -17,7 +17,7 @@
 
 1599522012 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
 
-1599521207 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
+1599785788 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
 	<iostream>
 	<locale.h>
 	<windows.h>
