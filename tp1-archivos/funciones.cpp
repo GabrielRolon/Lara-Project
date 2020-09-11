@@ -5,6 +5,7 @@ using namespace std;
 #include <cstdio>
 #include "funciones.h"
 #include "strUsuario.h"
+#include "ui.h"
 
 ///Funciones generales
 
@@ -46,6 +47,7 @@ void menuPrincipal(){
 
 void menuUsuarios(){
     system("cls");
+    //title("MENU USUARIOS");; cout << endl;
     cout << "MENU USUARIOS" << endl;
     cout << "--------------" << endl;
     cout << "1) NUEVO USUARIO" << endl;
