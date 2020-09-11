@@ -30,10 +30,10 @@ Usuario cargarDatos(){
     cout<<endl<<"ingresar peso: ";
     cin>>user.peso;
 
-    cout<<endl<<"ingresar perfil de actividad: ";
+    cout<<endl<<"ingresar perfil de actividad (A, B o C): ";
     cin>>user.actividad;
 
-    cout<<endl<<"ingresar si está apto el paciente: ";
+    cout<<endl<<"ingresar si está apto el paciente (1 o 0): ";
     cin>>user.aptoMedico;
 
     user.estado = true;
