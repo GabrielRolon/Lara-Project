@@ -3,9 +3,11 @@
 #include <string.h>
 using namespace std;
 #include <cstdio>
+#include <ctime>
 #include "funciones.h"
 #include "strUsuario.h"
 #include "ui.h"
+
 
 ///Funciones generales
 
@@ -155,3 +157,31 @@ void validarAptoM(bool estado){
         }
     }
 }
+/* void verificarFecha(int dia, int mes, int anio){
+    time_t tiempo;
+    char cad[80];
+    struct tm *tmPtr;
+    int edadmin = 13;
+
+    tiempo = time(NULL);
+    tmPtr = localtime(&tiempo);
+
+    int diaActual = tmPtr->tm_mday;
+    int mesActual = tmPtr->tm_mon+1;
+    int anioActual = 1900+tmPtr->tm_year;
+    int edadDias;
+
+    edadDias = ((anioActual - anio)*(365.242189))+((diaActual - dia)+((mesActual - mes)*(365.242189/12)));
+    while(edadDias+1 < 4749){
+        cout << "Fecha invalida, ingresar una fecha correcta (edad minima 13 años)" << endl;
+        cout << endl;
+        cout << "Dia: ";
+        cin >> dia;
+        cout << "Mes: ";
+        cin >> mes;
+        cout << "Año: ";
+        cin >> anio;
+        edadDias = ((anioActual - anio)*(365.242189))+((diaActual - dia)+((mesActual - mes)*(365.242189/12)));
+    }
+}
+*/

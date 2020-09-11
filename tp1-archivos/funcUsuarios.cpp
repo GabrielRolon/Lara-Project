@@ -57,8 +57,9 @@ Fecha cargarFecha(){
     cin >> reg.dia;
     cout << "Mes: ";
     cin >> reg.mes;
-    cout << "Anio: ";
+    cout << "Año: ";
     cin >> reg.anio;
+
     return reg;
 }
 /// Busca la posicion del usuario

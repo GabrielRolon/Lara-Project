@@ -13,7 +13,7 @@
 	"strUsuario.h"
 	"ui.h"
 
-1599521207 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
+1599794615 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
 
 1599522012 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
 
@@ -30,7 +30,7 @@
 
 1598913724 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
 
-1599780963 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
+1599794814 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<windows.h>
 	<cstdio>

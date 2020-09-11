@@ -14,6 +14,7 @@ void validarAltura(float);
 void validarPeso(float);
 void validarPerfilA(char);
 void validarAptoM(bool);
+void verificarFecha(int, int, int);
 
 
 #endif // FUNCIONES_H_INCLUDED
