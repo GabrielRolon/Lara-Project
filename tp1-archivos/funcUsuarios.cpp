@@ -18,23 +18,21 @@ Usuario cargarDatos(){
         cin >> user.id;
     }
 
-    verificarNombre(user.nombre);
-    verificarApellido(user.apellido);
+    validarNombre(user.nombre);
+
+    validarApellido(user.apellido);
+
 
     cout<<endl<<"ingresar fecha de nacimiento: ";
     user.nacimiento = cargarFecha();
 
-    cout<<endl<<"ingresar Altura: ";
-    cin>>user.altura;
+    validarAltura(user.altura);
 
-    cout<<endl<<"ingresar peso: ";
-    cin>>user.peso;
+    validarPeso(user.peso);
 
-    cout<<endl<<"ingresar perfil de actividad (A, B o C): ";
-    cin>>user.actividad;
+    validarPerfilA(user.actividad);
 
-    cout<<endl<<"ingresar si está apto el paciente (1 o 0): ";
-    cin>>user.aptoMedico;
+    validarAptoM(user.aptoMedico);
 
     user.estado = true;
 

@@ -37,31 +37,32 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1599520963 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funcusuarios.cpp
+1599792591 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<windows.h>
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"
 
-1599519298 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.h
+1599793910 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.h
 
-1599514128 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\strusuario.h
+1599788125 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\strusuario.h
 
-1599519072 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\main.cpp
+1599788125 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\main.cpp
 	<iostream>
 	<locale.h>
 	<windows.h>
 	"funciones.h"
 	"strUsuario.h"
 
-1599520645 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.cpp
+1599792565 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"
+	"ui.h"
 
 1599780559 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\ui.cpp
 	<iostream>
@@ -72,6 +73,28 @@
 1599780559 c:\users\maxi\documents\github\lara-project\tp1-archivos\ui.h
 
 1599780559 c:\users\maxi\documents\github\lara-project\tp1-archivos\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1599788125 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\ui.h
+
+1599788125 source:c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1599788125 c:\users\uhrig\desktop\utn frgp\2° cuatrimestre\laboratorio ii\tp1-archivos\lara-project\tp1-archivos\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>

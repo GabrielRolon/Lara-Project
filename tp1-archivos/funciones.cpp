@@ -87,23 +87,71 @@ void menuUsuarios(){
 ///Funciones de verificacion de datos
 
 ///Funcion para validar nombre
- void verificarNombre(char nombre[50]){
-    cin.ignore();
+void validarNombre(char nombre[50]){
+    fflush(stdin);
     cout<<"Ingresar nombre: ";
     cin.getline(nombre,50);
     while(strlen(nombre)==0 ){
         cout<<"ERROR - El nombre no puede ir vacío - Intente nuevamente: ";
         cin.getline(nombre,50);
     }
- }
+}
 
- ///Funcion para validar apellido
- void verificarApellido(char apellido[50]){
-    cin.ignore();
+///Funcion para validar apellido
+void validarApellido(char apellido[50]){
+    fflush(stdin);
     cout<<"Ingresar apellido: ";
     cin.getline(apellido,50);
     while(strlen(apellido)==0 ){
         cout<<"ERROR - El apellido no puede ir vacío - Intente nuevamente: ";
         cin.getline(apellido,50);
     }
- }
+}
+
+///Funcion para validar altura
+void validarAltura(float altura){
+    fflush(stdin);
+    cout << "Ingrese la altura: ";
+    cin >> altura;
+    while(altura<0){
+        cout<<"ERROR - La altura no puede ser un valor negativo: ";
+        cin >> altura;
+    }
+}
+
+///Funcion para validar altura
+void validarPeso(float peso){
+    fflush(stdin);
+    cout << "Ingrese el peso: ";
+    cin >> peso;
+    while(peso<0){
+        cout<<"ERROR - El peso no puede ser un valor negativo: ";
+        cin >> peso;
+    }
+}
+
+///Validar perfil de actividad
+void validarPerfilA(char perfil){
+    fflush(stdin);
+    cout << "Ingrese el perfil de actividad (A-B-C): ";
+    cin >> perfil;
+    while(perfil!='A' && perfil!='B' && perfil!='C' && perfil!='a' && perfil!='b' && perfil!='c'){
+        cout << "ERROR - El perfil solo puede ser A, B o C: ";
+        cin >> perfil;
+    }
+}
+
+///Validar apto medico
+void validarAptoM(bool estado){
+    fflush(stdin);
+    cout << "Ingrese el estado del paciente (0 o 1): ";
+    while(true){
+        fflush(stdin);
+        cin >> estado;
+        if(estado == 1 || estado == 0){
+            break;
+        }else{
+            cout << "ERROR - El estado solo puede ser 1 o 0: ";
+        }
+    }
+}

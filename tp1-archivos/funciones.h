@@ -8,7 +8,12 @@ void menuUsuarios();
 
 
 ///Funciones de verificacion de datos
-void verificarNombre(char [50]);
-void verificarApellido(char [50]);
+void validarNombre(char [50]);
+void validarApellido(char [50]);
+void validarAltura(float);
+void validarPeso(float);
+void validarPerfilA(char);
+void validarAptoM(bool);
+
 
 #endif // FUNCIONES_H_INCLUDED
