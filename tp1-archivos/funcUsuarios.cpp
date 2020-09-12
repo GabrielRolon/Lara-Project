@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <ctime>
 
 using namespace std;
 #include <cstdio>
@@ -51,6 +52,20 @@ void mostrarDatos(Usuario reg){
 }
 
 Fecha cargarFecha(){
+    time_t tiempo;
+    struct tm *tmPtr;
+    int edadmin = 13;
+    int Diasenmeses[12]={31,28,31,30,30,30,31,31,30,31,30,31};
+
+
+    tiempo = time(NULL);
+    tmPtr = localtime(&tiempo);
+
+    int diaActual = tmPtr->tm_mday;
+    int mesActual = tmPtr->tm_mon+1;
+    int anioActual = 1900+tmPtr->tm_year;
+    int edadDias;
+
     Fecha reg;
     cout << endl;
     cout << "Dia: ";
@@ -59,6 +74,33 @@ Fecha cargarFecha(){
     cin >> reg.mes;
     cout << "Año: ";
     cin >> reg.anio;
+
+    while (reg.anio<0||reg.anio>((anioActual)-13)){
+    cout << "Fecha invalida, ingresar un año correcto" << endl;
+    cout << endl;
+    cout << "Año: ";
+    cin >> reg.anio;
+    }
+
+    if((reg.anio%4)==0){
+    Diasenmeses[1]=29;
+    }
+
+    while(reg.mes>12||reg.mes<0){
+    cout << "Fecha invalida, ingresar un mes correcto" << endl;
+    cout << endl;
+    cout << "Mes: ";
+    cin >> reg.mes;
+    }
+
+
+    while(reg.dia>Diasenmeses[reg.mes]){
+    cout << "Fecha invalida, ingresar un día correcto" << endl;
+    cout << endl;
+    cout << "Día: ";
+    cin >> reg.dia;
+    }
+
 
     return reg;
 }

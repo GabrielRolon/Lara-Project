@@ -91,12 +91,38 @@ void menuUsuarios(){
 ///Funcion para validar nombre
 void validarNombre(char nombre[50]){
     fflush(stdin);
+    string nombreCom;
+    int Espacios,i,CantCaracteres;
+
     cout<<"Ingresar nombre: ";
     cin.getline(nombre,50);
-    while(strlen(nombre)==0 ){
+    nombreCom=nombre;
+    CantCaracteres=nombreCom.length();
+
+    for(i=0;i<CantCaracteres;i++){
+        if(nombre[i]==' '){
+            Espacios++;
+        }
+    }
+
+    while((CantCaracteres-Espacios)==0){
         cout<<"ERROR - El nombre no puede ir vacío - Intente nuevamente: ";
         cin.getline(nombre,50);
+        nombreCom=nombre;
+        CantCaracteres=nombreCom.length();
+
+        for(i=0;i<CantCaracteres;i++){
+            if(nombre[i]==' '){
+            Espacios++;
+            }
+
+        }
     }
+
+//    while(strlen(nombre)==0 ){
+//        cout<<"ERROR - El nombre no puede ir vacío - Intente nuevamente: ";
+//        cin.getline(nombre,50);
+//    }
 }
 
 ///Funcion para validar apellido
@@ -121,7 +147,7 @@ void validarAltura(float altura){
     }
 }
 
-///Funcion para validar altura
+///Funcion para validar peso
 void validarPeso(float peso){
     fflush(stdin);
     cout << "Ingrese el peso: ";
@@ -185,3 +211,61 @@ void validarAptoM(bool estado){
     }
 }
 */
+ void verificarFecha(int dia, int mes, int anio){
+    time_t tiempo;
+    char cad[80];
+    struct tm *tmPtr;
+    int edadmin = 13;
+    int Diasenmeses[12]={31,28,31,30,30,30,31,31,30,31,30,31};
+
+
+    tiempo = time(NULL);
+    tmPtr = localtime(&tiempo);
+
+    int diaActual = tmPtr->tm_mday;
+    int mesActual = tmPtr->tm_mon+1;
+    int anioActual = 1900+tmPtr->tm_year;
+    int edadDias;
+
+//    while (anio<0||anio>anioActual){
+//        cout << "Fecha invalida, ingresar un año correcto" << endl;
+//        cout << endl;
+//        cout << "Año: ";
+//        cin >> anio;
+//    }
+//
+//    if((anio%4)==0){
+//        Diasenmeses[1]=29;
+//    }
+//
+//
+//    while(mes>12||mes<0){
+//        cout << "Fecha invalida, ingresar un mes correcto" << endl;
+//        cout << endl;
+//        cout << "Mes: ";
+//        cin >> mes;
+//    }
+//
+//
+//    while(dia>Diasenmeses[mes]){
+//        cout << "Fecha invalida, ingresar un día correcto" << endl;
+//        cout << endl;
+//        cout << "Día: ";
+//        cin >> dia;
+//    }
+
+
+
+    edadDias = ((anioActual - anio)*(365.242189))+((diaActual - dia)+((mesActual - mes)*(365.242189/12)));
+    while(edadDias+1 < 4749){
+        cout << "Fecha invalida, ingresar una fecha correcta (edad minima 13 años)" << endl;
+        cout << endl;
+        cout << "Dia: ";
+        cin >> dia;
+        cout << "Mes: ";
+        cin >> mes;
+        cout << "Año: ";
+        cin >> anio;
+        edadDias = ((anioActual - anio)*(365.242189))+((diaActual - dia)+((mesActual - mes)*(365.242189/12)));
+    }
+}

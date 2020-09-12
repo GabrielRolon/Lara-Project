@@ -1,8 +1,20 @@
 # depslib dependency file v1.0
-1598819406 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\funciones.cpp
-
-1598821152 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\main.cpp
+1599881993 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
+	<windows.h>
+	<string.h>
+	<cstdio>
+	<ctime>
+	"funciones.h"
+	"strUsuario.h"
+	"ui.h"
+
+1599521547 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\main.cpp
+	<iostream>
+	<locale.h>
+	<windows.h>
+	"funciones.h"
+	"strUsuario.h"
 
 1599785806 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
@@ -107,4 +119,38 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1599860555 c:\users\gabri\documents\github\lara-project\tp1-archivos\funciones.h
+
+1599522626 c:\users\gabri\documents\github\lara-project\tp1-archivos\strusuario.h
+
+1599785722 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1599785722 c:\users\gabri\documents\github\lara-project\tp1-archivos\ui.h
+
+1599785722 c:\users\gabri\documents\github\lara-project\tp1-archivos\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1599880322 source:c:\users\gabri\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
+	<iostream>
+	<windows.h>
+	<ctime>
+	<cstdio>
+	"funciones.h"
+	"strUsuario.h"
 
