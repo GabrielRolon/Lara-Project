@@ -5,7 +5,8 @@
 
 void menuPrincipal();
 void menuUsuarios();
-
+void menuEntrenamientos();
+void menuConfiguracion();
 
 ///Funciones de verificacion de datos
 void validarNombre(char [50]);

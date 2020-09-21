@@ -16,20 +16,21 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1599785806 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
+1600638461 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>
 	<cstdio>
+	<ctime>
 	"funciones.h"
 	"strUsuario.h"
 	"ui.h"
 
-1599794615 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
+1600648092 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
 
-1599522012 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
+1600568284 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
 
-1599785788 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
+1600638461 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
 	<iostream>
 	<locale.h>
 	<windows.h>
@@ -42,9 +43,10 @@
 
 1598913724 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
 
-1599794814 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
+1600628018 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<windows.h>
+	<ctime>
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"
@@ -76,15 +78,15 @@
 	"strUsuario.h"
 	"ui.h"
 
-1599780559 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\ui.cpp
+1600568284 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\ui.cpp
 	<iostream>
 	<cstring>
 	"ui.h"
 	"rlutil.h"
 
-1599780559 c:\users\maxi\documents\github\lara-project\tp1-archivos\ui.h
+1600568284 c:\users\maxi\documents\github\lara-project\tp1-archivos\ui.h
 
-1599780559 c:\users\maxi\documents\github\lara-project\tp1-archivos\rlutil.h
+1600568284 c:\users\maxi\documents\github\lara-project\tp1-archivos\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -153,4 +155,14 @@
 	<cstdio>
 	"funciones.h"
 	"strUsuario.h"
+
+1600647866 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\entrenamiento.cpp
+	<iostream>
+	<windows.h>
+	<ctime>
+	<cstdio>
+	"entrenamiento.h"
+	"strUsuario.h"
+
+1600647867 c:\users\maxi\documents\github\lara-project\tp1-archivos\entrenamiento.h
 

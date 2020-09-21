@@ -160,6 +160,7 @@ int cantidadUsuarios(){
     bytes = ftell(f);
     fclose(f);
     cant = bytes / sizeof(Usuario);
+    return cant;
 }
 
 Usuario leerUser(int pos){
