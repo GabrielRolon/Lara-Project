@@ -201,41 +201,48 @@ void validarApellido(char apellido[50]){
 }
 
 ///Funcion para validar altura
-void validarAltura(float altura){
+float validarAltura(){
     fflush(stdin);
+    float altura;
     cout << "Ingrese la altura: ";
     cin >> altura;
     while(altura<0){
         cout<<"ERROR - La altura no puede ser un valor negativo: ";
         cin >> altura;
     }
+    return altura;
 }
 
 ///Funcion para validar peso
-void validarPeso(float peso){
+float validarPeso(){
     fflush(stdin);
+    float peso;
     cout << "Ingrese el peso: ";
     cin >> peso;
     while(peso<0){
         cout<<"ERROR - El peso no puede ser un valor negativo: ";
         cin >> peso;
     }
+    return peso;
 }
 
 ///Validar perfil de actividad
-void validarPerfilA(char perfil){
+char validarPerfilA(){
     fflush(stdin);
+    char perfil;
     cout << "Ingrese el perfil de actividad (A-B-C): ";
     cin >> perfil;
     while(perfil!='A' && perfil!='B' && perfil!='C' && perfil!='a' && perfil!='b' && perfil!='c'){
         cout << "ERROR - El perfil solo puede ser A, B o C: ";
         cin >> perfil;
     }
+    return perfil;
 }
 
 ///Validar apto medico
-void validarAptoM(bool estado){
+bool validarAptoM(){
     fflush(stdin);
+    bool estado;
     cout << "Ingrese Apto Médico (0 o 1): ";
     while(true){
         fflush(stdin);
@@ -246,6 +253,7 @@ void validarAptoM(bool estado){
             cout << "ERROR - El estado solo puede ser 1 o 0: ";
         }
     }
+    return estado;
 }
 /* void verificarFecha(int dia, int mes, int anio){
     time_t tiempo;

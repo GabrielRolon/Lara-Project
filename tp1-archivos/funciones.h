@@ -11,10 +11,10 @@ void menuConfiguracion();
 ///Funciones de verificacion de datos
 void validarNombre(char [50]);
 void validarApellido(char [50]);
-void validarAltura(float);
-void validarPeso(float);
-void validarPerfilA(char);
-void validarAptoM(bool);
+float validarAltura();
+float validarPeso();
+char validarPerfilA();
+bool validarAptoM();
 void verificarFecha(int, int, int);
 
 

@@ -15,7 +15,7 @@ Usuario cargarDatos(){
     cout<<"Ingresar ID: ";
     cin>>user.id;
     while(buscarUsuario(user.id) >= 0){
-        cout << "ID ya existe, reingresar: ";
+        cout << "ID existente, reingresar: ";
         cin >> user.id;
     }
 
@@ -23,17 +23,15 @@ Usuario cargarDatos(){
 
     validarApellido(user.apellido);
 
-
-    cout<<endl<<"ingresar fecha de nacimiento: ";
     user.nacimiento = cargarFecha();
 
-    validarAltura(user.altura);
+    user.altura = validarAltura();
 
-    validarPeso(user.peso);
+    user.peso = validarPeso();
 
-    validarPerfilA(user.actividad);
+    user.actividad = validarPerfilA();
 
-    validarAptoM(user.aptoMedico);
+    user.aptoMedico = validarAptoM();
 
     user.estado = true;
 
@@ -48,7 +46,7 @@ void mostrarDatos(Usuario reg){
     cout << "Apellido: " << reg.apellido << endl;
     cout << "Fecha: " << reg.nacimiento.dia << " / " << reg.nacimiento.mes << " / " << reg.nacimiento.anio << endl;
     cout << "Altura: " << reg.altura << endl;
-    cout << "Peso: " << reg.peso << endl;
+    cout << "Peso: " << reg.peso << " Kg" << endl;
 }
 
 Fecha cargarFecha(){
@@ -67,6 +65,7 @@ Fecha cargarFecha(){
     int edadDias;
 
     Fecha reg;
+    cout<<endl<<"ingresar fecha de nacimiento: ";
     cout << endl;
     cout << "Dia: ";
     cin >> reg.dia;
