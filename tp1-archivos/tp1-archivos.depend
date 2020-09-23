@@ -16,7 +16,7 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1600638461 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
+1600898909 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>
@@ -28,7 +28,7 @@
 
 1600648092 c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.h
 
-1600568284 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
+1600820895 c:\users\maxi\documents\github\lara-project\tp1-archivos\strusuario.h
 
 1600638461 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\main.cpp
 	<iostream>
@@ -43,7 +43,7 @@
 
 1598913724 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
 
-1600628018 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
+1600820976 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<windows.h>
 	<ctime>

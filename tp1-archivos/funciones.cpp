@@ -12,136 +12,142 @@ using namespace std;
 ///Funciones generales
 
 void menuPrincipal(){
-    system("cls");
-    cout << "MENU PRINCIPAL" << endl;
-    cout << "--------------" << endl;
-    cout << "1) USUARIOS" << endl;
-    cout << "2) ENTRENAMIENTOS" << endl;
-    cout << "3) REPORTES" << endl;
-    cout << "4) CONFIGURACION" << endl;
-    cout << "--------------" << endl;
-    cout << "0) SALIR DEL PROGRAMA" << endl << endl;
+    bool menu = true;
+    while(menu){
+        system("cls");
+        cout << "MENU PRINCIPAL" << endl;
+        cout << "--------------" << endl;
+        cout << "1) USUARIOS" << endl;
+        cout << "2) ENTRENAMIENTOS" << endl;
+        cout << "3) REPORTES" << endl;
+        cout << "4) CONFIGURACION" << endl;
+        cout << "--------------" << endl;
+        cout << "0) SALIR DEL PROGRAMA" << endl << endl;
 
-    int opcion;
-    cin >> opcion;
-    switch(opcion){
-        case 1:
-            menuUsuarios();
-        break;
-        case 2:
-            menuEntrenamientos();
-        break;
-        case 3:
-            //menuReportes();
-        break;
-        case 4:
-            menuConfiguracion();
-        break;
-        case 0:
-            system("cls");
+        int opcion;
+        cin >> opcion;
+        switch(opcion){
+            case 1:
+                menuUsuarios();
             break;
+            case 2:
+                menuEntrenamientos();
+            break;
+            case 3:
+                //menuReportes();
+            break;
+            case 4:
+                menuConfiguracion();
+            break;
+            case 0:
+                menu = false;
+            break;
+        }
     }
 }
 
 void menuUsuarios(){
-    system("cls");
-    cout << "MENU USUARIOS" << endl;
-    cout << "--------------" << endl;
-    cout << "1) NUEVO USUARIO" << endl;
-    cout << "2) MODIFICAR USUARIO" << endl;
-    cout << "3) LISTAR USUARIO POR ID" << endl;
-    cout << "4) LISTAR TODOS LOS USUARIOS" << endl;
-    cout << "5) ELIMINAR USUARIO" << endl;
-    cout << "--------------" << endl;
-    cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
-
-    int opcion;
-    cin >> opcion;
-
-    switch(opcion){
-        case 1:
-           guardarUsuario(cargarDatos());
-        break;
-        case 2:
-            modificarUser();
-        break;
-        case 3:
-            listarPorId();
-        break;
-        case 4:
-            listarUsuarios();
-        break;
-        case 5:
-            eliminarUser();
-        break;
-        case 0:
-            menuPrincipal();
-        break;
+    bool menu = true;
+    while(menu){
+        system("cls");
+        cout << "MENU USUARIOS" << endl;
+        cout << "--------------" << endl;
+        cout << "1) NUEVO USUARIO" << endl;
+        cout << "2) MODIFICAR USUARIO" << endl;
+        cout << "3) LISTAR USUARIO POR ID" << endl;
+        cout << "4) LISTAR TODOS LOS USUARIOS" << endl;
+        cout << "5) ELIMINAR USUARIO" << endl;
+        cout << "--------------" << endl;
+        cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
+        int opcion;
+        cin >> opcion;
+        switch(opcion){
+            case 1:
+                guardarUsuario(cargarDatos());
+            break;
+            case 2:
+                modificarUser();
+            break;
+            case 3:
+                listarPorId();
+            break;
+            case 4:
+                listarUsuarios();
+            break;
+            case 5:
+                eliminarUser();
+            break;
+            case 0:
+                menu = false;
+            break;
+        }
     }
-    menuUsuarios();
 }
 
 void menuEntrenamientos(){
-    system("cls");
-    //title("MENU ENTRENAMIENTOS");; cout << endl;
-    cout << "MENU ENTRENAMIENTOS" << endl;
-    cout << "--------------" << endl;
-    cout << "1) NUEVO ENTRENAMIENTO" << endl;
-    cout << "2) MODIFICAR ENTRENAMIENTO" << endl;
-    cout << "3) LISTAR ENTRENAMIENTO POR ID" << endl;
-    cout << "4) LISTAR ENTRENAMIENTO POR IDUSUARIO" << endl;
-    cout << "5) LISTAR TODOS LOS ENTRENAMIENTOS" << endl;
-    cout << "--------------" << endl;
-    cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
+    bool menu = true;
+    while(menu){
+        system("cls");
+        //title("MENU ENTRENAMIENTOS");; cout << endl;
+        cout << "MENU ENTRENAMIENTOS" << endl;
+        cout << "--------------" << endl;
+        cout << "1) NUEVO ENTRENAMIENTO" << endl;
+        cout << "2) MODIFICAR ENTRENAMIENTO" << endl;
+        cout << "3) LISTAR ENTRENAMIENTO POR ID" << endl;
+        cout << "4) LISTAR ENTRENAMIENTO POR IDUSUARIO" << endl;
+        cout << "5) LISTAR TODOS LOS ENTRENAMIENTOS" << endl;
+        cout << "--------------" << endl;
+        cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
 
-    int opcion;
-    cin >> opcion;
+        int opcion;
+        cin >> opcion;
 
-    switch(opcion){
-        case 1:
-           //nuevoentrenamiento();
-        break;
-        case 2:
-            //modificarEntrenamiento();
-        break;
-        case 3:
-            //listarEnPorId();
-        break;
-        case 4:
-            //listarEnPorIdUsuario();
-        break;
-        case 5:
-            //listarEnTodos();
-        break;
-        case 0:
-            menuPrincipal();
-        break;
+        switch(opcion){
+            case 1:
+               //nuevoentrenamiento();
+            break;
+            case 2:
+                //modificarEntrenamiento();
+            break;
+            case 3:
+                //listarEnPorId();
+            break;
+            case 4:
+                //listarEnPorIdUsuario();
+            break;
+            case 5:
+                //listarEnTodos();
+            break;
+            case 0:
+                menu = false;
+            break;
+        }
     }
-    menuUsuarios();
 }
 void menuConfiguracion(){
-    system("cls");
-    //title("MENU CONFIGURACION");; cout << endl;
-    cout << "MENU CONFIGURACIÓN" << endl;
-    cout << "--------------" << endl;
-    cout << "1) REALIZAR COPIA DE SEGURIDAD" << endl;
-    cout << "2) RESTAURAR COPIA DE SEGURIDAD" << endl;
-    cout << "--------------" << endl;
-    cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
+    bool menu = true;
+    while(menu){
+        system("cls");
+        cout << "MENU CONFIGURACIÓN" << endl;
+        cout << "--------------" << endl;
+        cout << "1) REALIZAR COPIA DE SEGURIDAD" << endl;
+        cout << "2) RESTAURAR COPIA DE SEGURIDAD" << endl;
+        cout << "--------------" << endl;
+        cout << "0) VOLVER AL MENU PRINCIPAL" << endl << endl;
+        int opcion;
+        cin >> opcion;
 
-    int opcion;
-    cin >> opcion;
-
-    switch(opcion){
-        case 1:
-           //copiaDeSeguridad();
-        break;
-        case 2:
-            //restaurarCopia();
-        break;
-        case 0:
-            menuPrincipal();
-        break;
+        switch(opcion){
+            case 1:
+               copiaDeSeguridad();
+            break;
+            case 2:
+                restaurarCopia();
+            break;
+            case 0:
+                menu = false;
+            break;
+        }
     }
 }
 ///Funciones de verificacion de datos
@@ -230,7 +236,7 @@ void validarPerfilA(char perfil){
 ///Validar apto medico
 void validarAptoM(bool estado){
     fflush(stdin);
-    cout << "Ingrese el estado del paciente (0 o 1): ";
+    cout << "Ingrese Apto Médico (0 o 1): ";
     while(true){
         fflush(stdin);
         cin >> estado;

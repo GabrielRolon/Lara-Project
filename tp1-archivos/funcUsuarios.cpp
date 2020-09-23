@@ -276,24 +276,41 @@ bool guardarModificacion(Usuario user, int pos){
 
 
 /// BACKUP DE ARCHIVO.DAT
-bool backupArchivo(){
+void copiaDeSeguridad(){
     Usuario user;
     FILE *f = fopen(FILEUSUARIOS, "rb");
     if(f == NULL){
         cout << "No se puede leer el archivo.dat .";
-        return false;
     }
     while(fread(&user, sizeof(Usuario), 1, f)){
         FILE *bk;
-    bk = fopen("datos/archUsuariosBK.dat", "ab");
-    if(bk == NULL){
-        cout << "No se puede guardar.";
-        return false;
-    }
+        bk = fopen("datos/archUsuariosBK.dat", "ab");
+        if(bk == NULL){
+            cout << "No se puede guardar.";
+        }
         fwrite(&user, sizeof(Usuario), 1, bk);
         fclose(bk);
     }
     fclose(f);
-    cout << "Se realizo Backup del archivo.dat llamado archUsuariosBK" << endl;
-    return true;
+    cout << "Se CREO copia de seguridad" << endl;
+    system("pause");
+}
+
+void restaurarCopia(){
+    Usuario user;
+    FILE *bk = fopen("datos/archUsuariosBK.dat", "rb");
+    if(bk == NULL){
+        cout << "No se puede leer el archivo.dat .";
+    }
+    while(fread(&user, sizeof(Usuario), 1, bk)){
+        FILE *f = fopen(FILEUSUARIOS, "ab");
+        if(f == NULL){
+            cout << "No se puede guardar.";
+        }
+        fwrite(&user, sizeof(Usuario), 1, f);
+        fclose(f);
+    }
+    fclose(bk);
+    cout << "Se RESTAURO copia de seguridad" << endl;
+    system("pause");
 }
