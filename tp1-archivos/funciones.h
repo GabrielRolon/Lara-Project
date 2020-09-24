@@ -3,6 +3,7 @@
 
 ///Las funciones en general
 
+void creditos();
 void menuPrincipal();
 void menuUsuarios();
 void menuEntrenamientos();

@@ -168,3 +168,66 @@
 
 1600915799 c:\users\maxi\documents\github\lara-project\tp1-archivos\entrenamiento.h
 
+1600901614 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600901614 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\ui.h
+
+1600901614 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600917136 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\entrenamiento.cpp
+	<iostream>
+	<windows.h>
+	<ctime>
+	<cstdio>
+	"entrenamiento.h"
+	"strUsuario.h"
+
+1600917136 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\entrenamiento.h
+
+1600910003 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\strusuario.h
+
+1600917136 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funcusuarios.cpp
+	<iostream>
+	<windows.h>
+	<ctime>
+	<cstdio>
+	"funciones.h"
+	"strUsuario.h"
+	"entrenamiento.h"
+
+1600977304 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funciones.h
+
+1600977877 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\main.cpp
+	<iostream>
+	<locale.h>
+	<windows.h>
+	"funciones.h"
+	"strUsuario.h"
+
+1600977897 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funciones.cpp
+	<iostream>
+	<windows.h>
+	<string.h>
+	<cstdio>
+	<ctime>
+	"funciones.h"
+	"strUsuario.h"
+	"entrenamiento.h"
+	"ui.h"
+

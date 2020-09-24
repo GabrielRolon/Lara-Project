@@ -12,6 +12,15 @@ using namespace std;
 
 ///Funciones generales
 
+void creditos()
+{
+    cout << "\t\t\tTrabajo práctico 1, 2 y 3 de Laboratorio 2";
+    cout << "\n\n\tAutores: ";
+    cout << "\n\t\tMaximiliano Miranda";
+    cout << "\n\t\tGabriel Rolón";
+    cout << "\n\t\tCristian Uhrig" << endl << endl;
+    Sleep(8000);
+}
 void menuPrincipal(){
     bool menu = true;
     while(menu){
