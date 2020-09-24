@@ -163,59 +163,25 @@ void menuConfiguracion(){
 ///Funciones de verificacion de datos
 
 ///Funcion para validar nombre
-char validarNombre(){
+void validarNombre(char nombre[50]){
     fflush(stdin);
-    char nombre[50];
-    /*
-    string nombreCom;
-    int Espacios,i,CantCaracteres;
-    char nombre[50];
-    cout<<"Ingresar nombre: ";
-    cin.getline(nombre,50);
-    nombreCom=nombre;
-    CantCaracteres=nombreCom.length();
-
-    for(i=0;i<CantCaracteres;i++){
-        if(nombre[i]==' '){
-            Espacios++;
-        }
-    }
-
-    while((CantCaracteres-Espacios)==0){
-        cout<<"ERROR - El nombre no puede ir vacío - Intente nuevamente: ";
-        cin.getline(nombre,50);
-        nombreCom=nombre;
-        CantCaracteres=nombreCom.length();
-
-        for(i=0;i<CantCaracteres;i++){
-            if(nombre[i]==' '){
-            Espacios++;
-            }
-
-        }
-    }
-    return nombre;
-    */
-    cout << "Ingresar Nombre: " << endl;
+    cout << "Ingresar Nombre: ";
     cin.getline (nombre,50);
     while(strlen(nombre)==0 ){
         cout<<"ERROR - El nombre no puede ir vacío - Intente nuevamente: ";
         cin.getline(nombre,50);
     }
-    return nombre[50];
 }
 
 ///Funcion para validar apellido
-char validarApellido(){
+void validarApellido(char apellido[50]){
     fflush(stdin);
-    char apellido[50];
     cout<<"Ingresar apellido: ";
     cin.getline(apellido,50);
     while(strlen(apellido)==0 ){
         cout<<"ERROR - El apellido no puede ir vacío - Intente nuevamente: ";
         cin.getline(apellido,50);
     }
-    return apellido[50];
 }
 
 ///Funcion para validar altura

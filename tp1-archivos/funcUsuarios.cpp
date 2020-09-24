@@ -19,14 +19,9 @@ Usuario cargarDatos(){
         cout << "ID existente, reingresar: ";
         cin >> user.id;
     }
-    cout << "Ingresar Nombre: "<< endl;
-    cin >> user.nombre;
-    //strcpy(user.nombre, validarNombre());
-    //user.nombre = validarNombre();
-    //strcpy(user.apellido, validarApellido());
-    //user.apellido = validarApellido();
-    cout << "Ingresar Apellido: "<< endl;
-    cin >> user.apellido;
+    validarNombre(user.nombre);
+
+    validarApellido(user.apellido);
 
     user.nacimiento = cargarFecha();
 

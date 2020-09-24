@@ -17,7 +17,7 @@ int main()
 {
     setlocale(LC_ALL, "Spanish");
     system("color 5f");
-    creditos();
+    //creditos();
     menuPrincipal();
 
     return 0;

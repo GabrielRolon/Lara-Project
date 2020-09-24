@@ -202,7 +202,7 @@
 
 1600910003 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\strusuario.h
 
-1600917136 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funcusuarios.cpp
+1600986607 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<windows.h>
 	<ctime>
@@ -211,16 +211,16 @@
 	"strUsuario.h"
 	"entrenamiento.h"
 
-1600977304 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funciones.h
+1600986566 e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funciones.h
 
-1600977877 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\main.cpp
+1600986673 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\main.cpp
 	<iostream>
 	<locale.h>
 	<windows.h>
 	"funciones.h"
 	"strUsuario.h"
 
-1600977897 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funciones.cpp
+1600986547 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>
