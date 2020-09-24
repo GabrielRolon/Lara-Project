@@ -6,6 +6,7 @@ using namespace std;
 #include <ctime>
 #include "funciones.h"
 #include "strUsuario.h"
+#include "entrenamiento.h"
 #include "ui.h"
 
 
@@ -104,7 +105,7 @@ void menuEntrenamientos(){
 
         switch(opcion){
             case 1:
-               //nuevoentrenamiento();
+               guardarEntren(cargarEntrenamiento());
             break;
             case 2:
                 //modificarEntrenamiento();

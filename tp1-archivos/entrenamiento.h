@@ -18,6 +18,7 @@ struct Entrenamiento{
 
 Entrenamiento cargarEntrenamiento();
 FechaEn cargarFechaEn();
+bool guardarEntren(Entrenamiento); // Guarda el registro de ENTRENAMIENTO dentro de archEntrenamiento.dat
 
 
 #endif // ENTRENAMIENTO_H_INCLUDED

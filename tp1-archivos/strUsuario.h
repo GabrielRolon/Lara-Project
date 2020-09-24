@@ -32,7 +32,7 @@ void listarUsuarios(); // Lista todos los datos del archivo.dat
 int cantidadUsuarios(); // Indica la cantidad total de usuarios registrados
 Usuario leerUser(int); // Lee el reg del usuario por la posicion
 void listarPorId(); // Lista por ID
-bool modificarUser();
+void modificarUser();
 bool eliminarUser();
 bool guardarModificacion(Usuario, int);
 /// BACKUP DE ARCHIVO.DAT

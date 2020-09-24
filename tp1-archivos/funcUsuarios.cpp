@@ -190,7 +190,7 @@ void listarPorId(){
     system("pause");
     menuUsuarios();
 }
-bool modificarUser(){
+void modificarUser(){
     system("cls");
     int codigo, pos, opc;
     cout << "Ingresar ID a buscar: ";
@@ -210,25 +210,22 @@ bool modificarUser(){
         switch(opc){
             case 1:
                 cout << "Nuevo Peso" << endl;
-                cin >> user.peso;
+                user.peso = validarPeso();
             break;
             case 2:
                 cout << "Nueva Actividad" << endl;
-                cin >> user.actividad;
+                user.actividad = validarPerfilA();
             break;
             case 3:
                 cout << "Nuevo Apto medico" << endl;
-                cin >> user.aptoMedico;
+                user.aptoMedico = validarAptoM;
             break;
         }
         guardarModificacion(user, pos);
 
     } else {
         cout << "No existe Usuario" << endl;
-        return false;
     }
-    system("pause");
-    menuUsuarios();
 }
 bool eliminarUser(){
     system("cls");

@@ -30,6 +30,7 @@ Entrenamiento cargarEntrenamiento(){
     cout << "Ingresar tiempo en minutos: " << endl;
     cin >> reg.tiempo;
 
+    return reg;
 }
 
 FechaEn cargarFechaEn(){
@@ -83,5 +84,18 @@ FechaEn cargarFechaEn(){
 
 
     return reg;
+}
+
+/// CREA archEntrenamiento.dat que permite almacenar los datos
+bool guardarEntren(Entrenamiento reg){
+    bool guardo;
+    FILE *f = fopen(FILEENTRENAMIENTO, "ab");
+    if(f == NULL){
+        cout << "No se puede guardar.";
+        return false;
+    }
+    guardo = fwrite(&reg, sizeof(Entrenamiento), 1, f);
+    fclose(f);
+    return guardo;
 }
 
