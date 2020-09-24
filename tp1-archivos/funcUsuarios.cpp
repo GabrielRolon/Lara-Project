@@ -6,6 +6,7 @@ using namespace std;
 #include <cstdio>
 #include "funciones.h"
 #include "strUsuario.h"
+#include "entrenamiento.h"
 
 const char *FILEUSUARIOS = "datos/archUsuarios.dat";
 
@@ -18,10 +19,14 @@ Usuario cargarDatos(){
         cout << "ID existente, reingresar: ";
         cin >> user.id;
     }
-
-    validarNombre(user.nombre);
-
-    validarApellido(user.apellido);
+    cout << "Ingresar Nombre: "<< endl;
+    cin >> user.nombre;
+    //strcpy(user.nombre, validarNombre());
+    //user.nombre = validarNombre();
+    //strcpy(user.apellido, validarApellido());
+    //user.apellido = validarApellido();
+    cout << "Ingresar Apellido: "<< endl;
+    cin >> user.apellido;
 
     user.nacimiento = cargarFecha();
 
@@ -47,6 +52,12 @@ void mostrarDatos(Usuario reg){
     cout << "Fecha: " << reg.nacimiento.dia << " / " << reg.nacimiento.mes << " / " << reg.nacimiento.anio << endl;
     cout << "Altura: " << reg.altura << endl;
     cout << "Peso: " << reg.peso << " Kg" << endl;
+    cout << "Perfil de Actividad: " << reg.actividad << endl;
+    if(reg.aptoMedico){
+        cout << "Apto Medico: Aprobado"<< endl;
+    } else {
+        cout << "Apto Medico: No Aprobado"<< endl;
+    }
 }
 
 Fecha cargarFecha(){
@@ -188,7 +199,6 @@ void listarPorId(){
     }
     cout << endl << endl;
     system("pause");
-    menuUsuarios();
 }
 void modificarUser(){
     system("cls");
@@ -288,7 +298,24 @@ void copiaDeSeguridad(){
         fclose(bk);
     }
     fclose(f);
-    cout << "Se CREO copia de seguridad" << endl;
+    cout << "Se CREO copia de seguridad USUARIO.DAT" << endl;
+    system("pause");
+    //COPIA DE ENTRENAMIENTO.DAT
+    Entrenamiento reg;
+    FILE *e = fopen("datos/archEntrenamiento.dat", "rb");
+    if(e == NULL){
+        cout << "No se puede leer el archivo.dat .";
+    }
+    while(fread(&reg, sizeof(Entrenamiento), 1, e)){
+        FILE *Ebk = fopen("datos/archEntrenamientoBK.dat", "ab");
+        if(Ebk == NULL){
+            cout << "No se puede guardar.";
+        }
+        fwrite(&reg, sizeof(Entrenamiento), 1, Ebk);
+        fclose(Ebk);
+    }
+    fclose(e);
+    cout << "Se CREO copia de seguridad Entrenamiento BK" << endl;
     system("pause");
 }
 

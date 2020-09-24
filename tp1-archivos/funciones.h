@@ -9,8 +9,8 @@ void menuEntrenamientos();
 void menuConfiguracion();
 
 ///Funciones de verificacion de datos
-void validarNombre(char [50]);
-void validarApellido(char [50]);
+char validarNombre();
+char validarApellido();
 float validarAltura();
 float validarPeso();
 char validarPerfilA();

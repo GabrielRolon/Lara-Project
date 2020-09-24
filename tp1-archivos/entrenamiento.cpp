@@ -10,25 +10,24 @@ using namespace std;
 const char *FILEENTRENAMIENTO = "datos/archEntrenamiento.dat";
 
 Entrenamiento cargarEntrenamiento(){
+    system("cls");
     Entrenamiento reg;
-    //id autonumerico
-    cout << "Ingresar ID de Usuario: " << endl;
+    reg.id = cantidadEntren()+1;
+    cout << "Su ID es: " << reg.id << endl;
+    cout << "Ingresar ID de Usuario: ";
     cin >> reg.idUsuario;
     while(buscarUsuario(reg.idUsuario) == -1){
-        cout << "Ingresar un ID valido"<< endl;
+        cout << "Ingresar un ID valido";
         cin >> reg.idUsuario;
     }
-    //validar idUsuario
-    cout << "Ingresar fecha de entrenamiento: " << endl;
+    cout << "Ingresar fecha de entrenamiento: ";
     reg.diEntrenamiento = cargarFechaEn();
-    cout << "Ingresar Actividad: " << endl;
-    cout << "1 - Caminata, 2 - Correr, 3 - Bicicleta, 4 - Natación y 5 - Pesas" << endl;
-    cin >> reg.actividad;
-    //validar actividad numero entre 1 y 5 y apto medico aprobado
-    cout << "Ingresar calorias: " << endl;
-    cin >> reg.calorias;
-    cout << "Ingresar tiempo en minutos: " << endl;
-    cin >> reg.tiempo;
+
+    reg.actividad = validarAct();
+
+    reg.calorias = validarCalorias();
+
+    reg.tiempo = validarMin();
 
     return reg;
 }
@@ -85,6 +84,27 @@ FechaEn cargarFechaEn(){
 
     return reg;
 }
+void mostrarEnt(Entrenamiento reg){
+    cout << endl;
+    cout << "----------" << endl;
+    cout << "ID: " << reg.id << endl;
+    cout << "ID Usuario: " << reg.idUsuario << endl;
+    cout << "Fecha de Entrenamiento: " << reg.diEntrenamiento.dia << " / " << reg.diEntrenamiento.mes << " / " << reg.diEntrenamiento.anio << endl;
+    switch(reg.actividad){
+        case 1: cout << "Actividad: Caminata" << endl;
+        break;
+        case 2: cout << "Actividad: Correr" << endl;
+        break;
+        case 3: cout << "Actividad: Bicicleta" << endl;
+        break;
+        case 4: cout << "Actividad: Natacion" << endl;
+        break;
+        case 5: cout << "Actividad: Pesas" << endl;
+        break;
+    }
+    cout << "Calorias: " << reg.calorias << endl;
+    cout << "Tiempo: " << reg.tiempo << " Min" << endl;
+}
 
 /// CREA archEntrenamiento.dat que permite almacenar los datos
 bool guardarEntren(Entrenamiento reg){
@@ -98,4 +118,85 @@ bool guardarEntren(Entrenamiento reg){
     fclose(f);
     return guardo;
 }
+// Devuelve la cantidad de registros
+int cantidadEntren(){
+    FILE *f = fopen(FILEENTRENAMIENTO, "rb");
+    if(f == NULL){
+        fclose(f);
+        return 0;
+    }
+    int bytes, cant;
+    fseek(f, 0, SEEK_END);
+    bytes = ftell(f);
+    fclose(f);
+    cant = bytes / sizeof(Entrenamiento);
+    return cant;
+}
 
+///Funcion para validar calorias
+float validarCalorias(){
+    fflush(stdin);
+    float calorias;
+    cout << "Ingresar calorias: ";
+    cin >> calorias;
+    while(calorias<0){
+        cout<<"ERROR - El peso no puede ser un valor negativo: ";
+        cin >> calorias;
+    }
+    return calorias;
+}
+///Funcion para validar minutos
+int validarMin(){
+    fflush(stdin);
+    int minutos;
+    cout << "Ingresar tiempo en minutos: ";
+    cin >> minutos;
+    while(minutos<0){
+        cout<<"ERROR - El peso no puede ser un valor negativo: ";
+        cin >> minutos;
+    }
+    return minutos;
+}
+
+int validarAct(){
+    int opc, mayor = 5, menor = 1;
+
+    //validamos que el ingreso sea un entero y entre el 1 y el 5
+
+    cout << "Ingresar Actividad 1 - Caminata, 2 - Correr, 3 - Bicicleta, 4 - Natación y 5 - Pesas: ";
+
+    while(!(cin >> opc) || (opc < menor || opc > mayor)){
+        //le indicamos el error al usuario
+        cout << "\nError: Ingrese un numero del " << menor << " al " << mayor << " por favor: ";
+        //limpiamos el ultimo ingreso
+        cin.clear();
+        //descartamos el ultimo ingreso
+        cin.ignore(132, '\n');
+    }
+    return opc;
+}
+
+/// LEE el archivo.dat todos los entrenamientos
+void listarEnTodos(){
+    system("cls");
+    int cant = cantidadEntren();
+    for(int i=0; i<cant; i++){
+        Entrenamiento reg = leerEntren(i);
+        mostrarEnt(reg);
+        //if(reg.estado){}
+    }
+    cout << endl << endl;
+    system("pause");
+}
+
+Entrenamiento leerEntren(int pos){
+    Entrenamiento reg;
+    FILE *f = fopen(FILEENTRENAMIENTO, "rb");
+    if(f == NULL){
+        reg.id = 0;
+        return reg;
+    }
+    fseek(f, pos *sizeof(Entrenamiento), SEEK_SET);
+    fread(&reg, sizeof(Entrenamiento), 1, f);
+    fclose(f);
+}
