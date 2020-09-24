@@ -195,6 +195,7 @@ void listarPorId(){
     cout << endl << endl;
     system("pause");
 }
+
 void modificarUser(){
     system("cls");
     int codigo, pos, opc;

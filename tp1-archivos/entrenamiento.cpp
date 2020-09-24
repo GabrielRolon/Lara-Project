@@ -269,6 +269,22 @@ bool guardarModificacionEnt(Entrenamiento reg, int pos){
     return guardo;
 }
 
+void listarPorIdEnt(){
+    system("cls");
+    int codigo, pos;
+    cout << "Ingresar ID a buscar: ";
+    cin >> codigo;
+    pos = buscarEnt(codigo);
+    if(pos >= 0){
+        Entrenamiento reg;
+        reg = leerEntren(pos);
+        mostrarEnt(reg); //alternativa tambien funciona: mostrarDatos(leerUser(pos));
+    } else {
+        cout << "\nCodigo inexistente" << endl;
+    }
+    cout << endl << endl;
+    system("pause");
+}
 
 
 

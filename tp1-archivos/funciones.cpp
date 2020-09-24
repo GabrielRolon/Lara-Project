@@ -120,7 +120,7 @@ void menuEntrenamientos(){
                 modificarEnt();
             break;
             case 3:
-                //listarEnPorId();
+                listarPorIdEnt();
             break;
             case 4:
                 //listarEnPorIdUsuario();
