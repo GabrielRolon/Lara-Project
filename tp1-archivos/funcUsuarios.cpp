@@ -280,12 +280,13 @@ bool guardarModificacion(Usuario user, int pos){
 void copiaDeSeguridad(){
     Usuario user;
     FILE *f = fopen(FILEUSUARIOS, "rb");
+    FILE *backup = fopen("datos/archUsuariosBK.dat", "wb"); //Seteo a 0 el archivo de bk
+    fclose(backup);
     if(f == NULL){
         cout << "No se puede leer el archivo.dat .";
     }
     while(fread(&user, sizeof(Usuario), 1, f)){
-        FILE *bk;
-        bk = fopen("datos/archUsuariosBK.dat", "ab");
+        FILE *bk = fopen("datos/archUsuariosBK.dat", "ab");
         if(bk == NULL){
             cout << "No se puede guardar.";
         }
@@ -295,9 +296,12 @@ void copiaDeSeguridad(){
     fclose(f);
     cout << "Se CREO copia de seguridad USUARIO.DAT" << endl;
     system("pause");
+
     //COPIA DE ENTRENAMIENTO.DAT
     Entrenamiento reg;
     FILE *e = fopen("datos/archEntrenamiento.dat", "rb");
+    FILE *Entbk = fopen("datos/archEntrenamientoBK.dat", "wb"); //Seteo a 0 el archivo de bk
+    fclose(Entbk);
     if(e == NULL){
         cout << "No se puede leer el archivo.dat .";
     }
@@ -317,6 +321,8 @@ void copiaDeSeguridad(){
 void restaurarCopia(){
     Usuario user;
     FILE *bk = fopen("datos/archUsuariosBK.dat", "rb");
+    FILE *orig = fopen(FILEUSUARIOS, "wb"); //Seteo a 0 el archivo original
+    fclose(orig);
     if(bk == NULL){
         cout << "No se puede leer el archivo.dat .";
     }
@@ -329,6 +335,28 @@ void restaurarCopia(){
         fclose(f);
     }
     fclose(bk);
-    cout << "Se RESTAURO copia de seguridad" << endl;
+    cout << endl;
+    cout << "Se RESTAURO copia de seguridad usuario.dat" << endl;
+    system("pause");
+
+    //RESTAURA DE ENTRENAMIENTOBK.DAT a original
+    Entrenamiento reg;
+    FILE *e = fopen("datos/archEntrenamientoBK.dat", "rb");
+    FILE *Entorig = fopen("datos/archEntrenamiento.dat", "wb"); //Seteo a 0 el archivo original
+    fclose(Entorig);
+    if(e == NULL){
+        cout << "No se puede leer el Entrenamiento.dat .";
+    }
+    while(fread(&reg, sizeof(Entrenamiento), 1, e)){
+        FILE *EnOriginal = fopen("datos/archEntrenamiento.dat", "ab");
+        if(EnOriginal == NULL){
+            cout << "No se puede guardar.";
+        }
+        fwrite(&reg, sizeof(Entrenamiento), 1, EnOriginal);
+        fclose(EnOriginal);
+    }
+    fclose(e);
+    cout << endl;
+    cout << "Se RESTAURO copia de seguridad Entrenamiento.dat" << endl;
     system("pause");
 }
