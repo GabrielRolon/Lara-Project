@@ -117,7 +117,7 @@ void menuEntrenamientos(){
                guardarEntren(cargarEntrenamiento());
             break;
             case 2:
-                //modificarEntrenamiento();
+                modificarEnt();
             break;
             case 3:
                 //listarEnPorId();

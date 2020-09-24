@@ -27,4 +27,8 @@ float validarCalorias(); //valida numero real positivo
 int validarMin(); //valida numero entero positivo
 Entrenamiento leerEntren(int); //lee el archivo
 void listarEnTodos(); // Lista todos los datos del archEntrenamiento.dat
+int buscarEnt(int); // Busca el entrenamiento ID y devuelve la posicion
+void modificarEnt(); // Modifica entrenamiento
+bool guardarModificacionEnt(Entrenamiento, int);
+
 #endif // ENTRENAMIENTO_H_INCLUDED

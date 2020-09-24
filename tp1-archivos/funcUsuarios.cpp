@@ -232,6 +232,7 @@ void modificarUser(){
         cout << "No existe Usuario" << endl;
     }
 }
+
 bool eliminarUser(){
     system("cls");
     int codigo, pos;
