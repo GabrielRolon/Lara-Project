@@ -31,5 +31,6 @@ int buscarEnt(int); // Busca el entrenamiento ID y devuelve la posicion
 void modificarEnt(); // Modifica entrenamiento
 bool guardarModificacionEnt(Entrenamiento, int);
 void listarPorIdEnt(); // Lista por ID
-
+void listarPorIdUsuario();
+//void listarPorIdUsuario(reg);
 #endif // ENTRENAMIENTO_H_INCLUDED

@@ -16,7 +16,7 @@
 	"funciones.h"
 	"strUsuario.h"
 
-1600986902 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
+1600988885 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funciones.cpp
 	<iostream>
 	<windows.h>
 	<string.h>
@@ -44,7 +44,7 @@
 
 1598913724 c:\users\maxi\documents\github\lara-project\tp1-archivos\fecha.h
 
-1600988432 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
+1600988885 source:c:\users\maxi\documents\github\lara-project\tp1-archivos\funcusuarios.cpp
 	<iostream>
 	<windows.h>
 	<ctime>
@@ -166,7 +166,7 @@
 	"entrenamiento.h"
 	"strUsuario.h"
 
-1600988432 c:\users\maxi\documents\github\lara-project\tp1-archivos\entrenamiento.h
+1600991151 c:\users\maxi\documents\github\lara-project\tp1-archivos\entrenamiento.h
 
 1600901614 source:e:\utn frgp\2° cuatrimestre\laboratorio ii\lara-project\tp1-archivos\ui.cpp
 	<iostream>
